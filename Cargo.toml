@@ -1,0 +1,8 @@
+[package]
+name = "rust-code-snippet"
+version = "0.1.0"
+authors = ["mahdi <mahdi.robatipoor@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+ferris-says = "0.1.1"
