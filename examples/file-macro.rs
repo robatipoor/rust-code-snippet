@@ -1,3 +1,4 @@
 fn main() {
-    println!("{}", file!())
+    let file_name = file!();
+    println!("{}", file_name);
 }
