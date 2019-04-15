@@ -1,0 +1,5 @@
+Rust is a multi-paradigm systems programming language focused on safety, especially safe concurrency.
+Rust is syntactically similar to C++ but is designed to provide better memory safety while maintaining high performance.
+Rust was originally designed by Graydon Hoare at Mozilla Research, with contributions from Dave Herman, Brendan Eich, and others.
+The designers refined the language while writing the Servo layout engine[18] and the Rust compiler.
+The compiler is free and open-source software dual-licensed under the MIT License and Apache License 2.0. 
