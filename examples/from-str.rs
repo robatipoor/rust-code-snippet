@@ -26,6 +26,24 @@ impl FromStr for Person {
     }
 }
 
+#[derive(Debug)]
+pub enum Shell {
+    Zsh,
+    Bash,
+}
+
+impl FromStr for Shell {
+    type Err = String;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "zsh" => Ok(Shell::Zsh),
+            "bash" => Ok(Shell::Bash),
+            _ => Err("Error".to_owned()),
+        }
+    }
+}
+
 fn main() {
     let ali: Person = "ali abedi 34".parse().unwrap();
     let hassan: Person = "hassan aboli 22".parse().unwrap();

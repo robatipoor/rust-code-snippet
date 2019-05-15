@@ -1,20 +1,17 @@
 use std::ops::Deref;
 
-struct Token<'a> {
-    inner: &'a str,
-}
+struct MyString<'a>(&'a str);
 
-impl<'a> Deref for Token<'a> {
+impl<'a> Deref for MyString<'a> {
     type Target = &'a str;
     /// Dereferences the value.
     fn deref(&self) -> &Self::Target {
-        &self.inner
+        &self.0
     }
 }
 
 fn main() {
-    let token = Token {
-        inner:"some string ...."
-    };
-    println!("{}", *token);
+    let my_string = MyString("some string ....");
+    let s: &str = &my_string; // or &*my_string;
+    println!("{}", s);
 }
